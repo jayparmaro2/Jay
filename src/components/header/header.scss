@@ -1,0 +1,87 @@
+header {
+    padding-top: 25px;
+}
+
+.header {
+    padding: 0px 10px 0px 20px;
+    background-color: #1C1C1C;
+    border: 1px solid #202020;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+        height: 30px;
+        width: auto;
+
+        a {
+            display: flex;
+
+            img {
+                width: auto;
+                height: 30px;
+            }
+        }
+    }
+
+    nav {
+        display: flex;
+        gap: 50px;
+        align-items: center;
+
+        a {
+            padding: 28px 0px;
+            font-size: 16px;
+            font-weight: 400;
+            color: #ffffff66;
+            transition: all 0.5s;
+            font-family: 'Bricolage Grotesque';
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 11px;
+                height: 11px;
+                border-radius: 50%;
+                background-color: #DCF763;
+                top: -12px;
+                transition: all 0.35s;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            &.active::after,
+            &:hover::after {
+                top: -5px;
+            }
+
+            &.active,
+            &:hover {
+                color: #DCF763;
+            }
+        }
+    }
+
+    .header-btn {
+        border: 1px solid #202020;
+        background: linear-gradient(83.81deg, #262626 0%, #2C2C2C 100%);
+        font-size: 16px;
+        font-weight: 400;
+        padding: 18px 40px;
+        border-radius: 12px;
+        color: #ffffff;
+        outline: none !important;
+        font-family: 'Bricolage Grotesque';
+        transition: all 0.35s;
+        box-shadow: rgb(43 43 43 / 25%) 0px 30px 60px -12px inset, rgb(14 14 14 / 30%) 0px 18px 36px -18px inset;
+
+        &:active,
+        &:hover {
+            box-shadow: rgb(14 14 14 / 30%) 0px 18px 36px -18px inset, rgb(43 43 43 / 25%) 0px 30px 60px -12px inset;
+            color: #DCF763;
+        }
+    }
+}
